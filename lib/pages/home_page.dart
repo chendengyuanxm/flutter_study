@@ -45,24 +45,17 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(title: Text('Home'),),
       body: Container(
         padding: const EdgeInsets.all(10),
-        child: ListView.builder(
+        child: ListView.separated(
           itemCount: _items != null ? _items.length : 0,
+          separatorBuilder: (BuildContext context, int index) => Divider(),
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () => _onItemClick(index),
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(),
-                  ),
-                ),
-                child: Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                  color: Colors.white,
-                  child: Text(_items[index].name,
-                    style: TextStyle(fontSize: 16,),
-                  ),
+              child: Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                child: Text(_items[index].name,
+                  style: TextStyle(fontSize: 16,),
                 ),
               ),
             );
