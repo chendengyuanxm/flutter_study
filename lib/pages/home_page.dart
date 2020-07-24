@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterstudy/pages/grid_paper_test_page.dart';
 import 'package:flutterstudy/pages/safe_area_test_page.dart';
 import 'package:flutterstudy/pages/unbounded_test_page.dart';
+import 'package:flutterstudy/pages/widget_test_page.dart';
 import 'package:flutterstudy/utils/index.dart';
 
 class PageItem {
@@ -31,6 +32,7 @@ class _HomePageState extends State<HomePage> {
       PageItem(name: 'SafeAreaTestPage', page: SafeAreaTestPage()),
       PageItem(name: 'UnboundedWidgetTestPage', page: UnboundedWidgetTestPage()),
       PageItem(name: 'GridPaperTestPage', page: GridPaperTestPage()),
+      PageItem(name: 'WidgetTestPage', page: WidgetTestPage()),
     ];
   }
 
