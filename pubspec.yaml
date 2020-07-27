@@ -31,10 +31,13 @@ dependencies:
   provider: ^3.0.0
   flutter_localizations:
     sdk: flutter
+  floor: ^0.14.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  floor_generator: ^0.14.0
+  build_runner: ^1.7.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
