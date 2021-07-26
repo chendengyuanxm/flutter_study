@@ -5,11 +5,11 @@ class User {
   @primaryKey
   final int id;
 
-  @ColumnInfo(name: 'name', nullable: false)
+  @ColumnInfo(name: 'name')
   final String name;
 
   @ignore
-  String nickname;
+  String? nickname;
 
   String get combinedName => '$name ($nickname)';
 

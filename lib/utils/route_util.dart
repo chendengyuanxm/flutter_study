@@ -15,7 +15,7 @@ class RouteUtil {
     return Navigator.of(context).pushReplacement(_buildRoute(page));
   }
 
-  static pop<T>(BuildContext context, [ T result ]) {
+  static pop<T>(BuildContext context, [ T? result ]) {
     return Navigator.of(context).pop(result);
   }
 

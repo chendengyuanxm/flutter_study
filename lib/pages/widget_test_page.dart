@@ -64,7 +64,7 @@ class WidgetTestPage extends StatelessWidget {
                 height: 50,
                 color: Colors.black26,
               ),
-              onRefresh: (){},
+              onRefresh: () async {},
             ),
 
             RepaintBoundary(),

@@ -10,7 +10,7 @@ abstract class UserDao {
   Stream<List<User>> findAllUserAsStream();
 
   @Query('SELECT * FROM User WHERE id = :id')
-  Stream<User> findUserById(int id);
+  Stream<User?> findUserById(int id);
 
   @insert
   Future<void> insertUser(User user);

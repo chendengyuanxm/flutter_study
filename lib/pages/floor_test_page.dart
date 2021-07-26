@@ -26,7 +26,7 @@ class _FloorTestState extends State<FloorTestPage> {
           builder: (context, snapshot) {
             if (!snapshot.hasData) return Container();
 
-            List<User> users = snapshot.data;
+            List<User> users = snapshot.data!;
             return ListView.builder(
               itemBuilder: (context, index) {
                 return Text(users[index].combinedName);

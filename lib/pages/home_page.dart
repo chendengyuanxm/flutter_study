@@ -7,8 +7,8 @@ import 'package:flutterstudy/pages/widget_test_page.dart';
 import 'package:flutterstudy/utils/index.dart';
 
 class PageItem {
-  final String name;
-  final Widget page;
+  final String? name;
+  final Widget? page;
 
   PageItem({this.name, this.page});
 }
@@ -20,7 +20,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  static List<PageItem> _items;
+  static late List<PageItem> _items;
 
   @override
   void initState() {
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   _onItemClick(int index) {
-    Widget page = _items[index].page;
+    Widget page = _items[index].page!;
     RouteUtil.pushPage(context, page);
   }
 
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                child: Text(_items[index].name,
+                child: Text(_items[index].name!,
                   style: TextStyle(fontSize: 16,),
                 ),
               ),
