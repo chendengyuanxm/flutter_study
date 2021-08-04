@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutterstudy/pages/floor_test_page.dart';
 import 'package:flutterstudy/pages/grid_paper_test_page.dart';
+import 'package:flutterstudy/pages/isolate_test_page.dart';
 import 'package:flutterstudy/pages/safe_area_test_page.dart';
 import 'package:flutterstudy/pages/unbounded_test_page.dart';
 import 'package:flutterstudy/pages/widget_test_page.dart';
+import 'package:flutterstudy/vm/isolate_test_vm.dart';
 import 'package:flutterstudy/utils/index.dart';
 
 class PageItem {
@@ -35,6 +37,7 @@ class _HomePageState extends State<HomePage> {
       PageItem(name: 'GridPaperTestPage', page: GridPaperTestPage()),
       PageItem(name: 'WidgetTestPage', page: WidgetTestPage()),
       PageItem(name: 'FloorTestPage', page: FloorTestPage()),
+      PageItem(name: 'IsolateTestPage', page: IsolateTestPage()),
     ];
   }
 

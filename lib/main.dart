@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutterstudy/app.dart';
 import 'package:flutterstudy/db/dao/database.dart';
 import 'package:flutterstudy/db/dao/db_service.dart';
 import 'package:flutterstudy/model/user.dart';
@@ -13,7 +14,7 @@ void main() {
 //  debugRepaintRainbowEnabled = true;
 
   WidgetsFlutterBinding.ensureInitialized();
-  _initDatabase();
+  // _initDatabase();
 
   runApp(
     MultiProvider(
@@ -32,22 +33,3 @@ _initDatabase() async{
   DatabaseService.userDao.insertUser(user);
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MainPage(),
-      localizationsDelegates: [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-    );
-  }
-}
