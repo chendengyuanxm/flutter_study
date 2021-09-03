@@ -33,6 +33,10 @@ dependencies:
     sdk: flutter
   floor: ^1.1.0
   isolate: ^2.0.2
+#  fl_chart: ^0.40.0
+  fl_chart:
+    path: ../open-source/fl_chart
+
 
 dev_dependencies:
   flutter_test:
