@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterstudy/pages/CameraPage.dart';
 import 'package:flutterstudy/pages/ChartPage.dart';
 import 'package:flutterstudy/pages/floor_test_page.dart';
 import 'package:flutterstudy/pages/grid_paper_test_page.dart';
@@ -40,6 +41,7 @@ class _HomePageState extends State<HomePage> {
       PageItem(name: 'FloorTestPage', page: FloorTestPage()),
       PageItem(name: 'IsolateTestPage', page: IsolateTestPage()),
       PageItem(name: 'ChartPage', page: ChartPage()),
+      PageItem(name: 'CameraPage', page: CameraPage()),
     ];
   }
 

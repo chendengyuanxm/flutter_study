@@ -38,17 +38,50 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.devin.flutterstudy"
-        minSdkVersion 16
+        applicationId "com.timeloit.xiamenchengguan"
+//        applicationId "com.devin.flutterstudy"
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.timeloit.xiamenchengguan",
+                JPUSH_APPKEY : "3456e4566cfa7c1f65d04b7b", //极光开发平台上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
     }
 
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'timeloit'
+            keyPassword 'timeloit'
+            storeFile file('key/key.jks')
+            storePassword 'timeloit'
+        }
+        debug {
+            storeFile file('key/key.jks')
+            storePassword 'timeloit'
+            keyAlias = 'timeloit'
+            keyPassword 'timeloit'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+        }
+        debug {
             signingConfig signingConfigs.debug
         }
     }
@@ -60,4 +93,10 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.huawei.hms:push:5.3.0.301'
+    // 引入极光-华为插件，如果采用此配置，无需拷贝jpush-android-plugin-huawei-v4.x.x.jar文件，也无需配置cn.jpush.android.service.PluginHuaweiPlatformsService组件
+    implementation 'cn.jiguang.sdk.plugin:huawei:4.4.0'
 }
+
+apply plugin: 'com.huawei.agconnect'

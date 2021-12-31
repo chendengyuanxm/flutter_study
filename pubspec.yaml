@@ -36,6 +36,11 @@ dependencies:
 #  fl_chart: ^0.40.0
   fl_chart:
     path: ../open-source/fl_chart
+  camera: ^0.9.2+2
+  video_player: ^2.2.3
+  jpush_flutter: ^2.1.5
+  agora_rtc_engine: any
+  flutter_webview_plugin: 0.3.11
 
 
 dev_dependencies:
